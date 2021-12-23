@@ -11,6 +11,6 @@ import (
  * @phone: 18170618733
  * @DateTime: 2021/12/19 14:24
  **/
-func main() {
+func main3() {
 	fmt.Println(time.Now().Unix())
 }

@@ -6,7 +6,7 @@ import (
 	"github.com/astaxie/beego"
 )
 
-func main2() {
+func main() {
 	//连接数据库
 	utils.ConnectDB()
 
