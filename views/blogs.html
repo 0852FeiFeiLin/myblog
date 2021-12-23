@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/static/css/blogs.css">
+</head>
+<body>
+<!-- 这是展示Blogs列表的页面，通过这些小窗口，然后进入详情页面，注意，这里暂时还没进行分页，-->
+<ul class="blogs">
+    {{range .Blogs}}
+        <li>
+            <!--一个li里面有标题，时间，简介，内容说明 -->
+            <div class="content">
+                <!--这里是内容=标题url + 描述 + date日期 -->
+                <a href="/bloginfo?tag={{.Tags}}&title={{.Title}}&author={{.Author}}">
+                    <h2>
+                        {{.Title}}
+                    </h2>
+                </a>
+                <p>{{.CreateTime1}}</p>
+                <span>{{.Tags}}</span>
+                <p>{{.Author}}</p>
+                <a href="/bloginfo?tag={{.Tags}}&title={{.Title}}&author={{.Author}}">
+                    <p>
+                        {{.Short}}
+                    </p>
+                </a>
+            </div>
+        </li>
+    {{end}}
+</ul>
+
+</body>
+</html>

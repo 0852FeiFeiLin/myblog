@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlogInfo</title>
+    <link rel="stylesheet" href="/static/css/bloginfo.css">
+
+    <script src="/static/js/jquery-1.8.3.js"></script>
+    <!-- 引入js代码文件-->
+    <script src="/static/js/bloginfo.js"></script>
+
+    <!--后面我们利用ajax提交form表单，实现异步更新，然后发送给后台，然后我们再更新数据库内容 -->
+
+    {{/* <script>
+        function blogOut() { //传递参数，就是博客详情，然后我们再返回给后端
+            //先获取到页面的内容，然后发送给后端
+            var title = document.getElementById("title").value;
+            //var title =$("#title").text()
+            var tags = document.getElementById("tags").value;
+            console.log(title, tags)
+            var in1 = {
+                "title": title,
+                "tags": tags,
+            };
+            $.ajax({
+                url: "/deleteBlog",
+                type: "GET",
+                async : true,
+                dataType: "json",
+                data: tags,
+                contentType: "application/json;charset=utf-8",
+                success: function (info) {
+                    console.log(info)
+                    if (info != null) {
+                        document.getElementById("hint").innerText = info;
+                    } else {
+                        console.log("后端回传数据为空")
+                    }
+                }
+            })
+        }
+    </script>*/}}
+
+    <script>
+        function subm() {
+            //先获取到页面编辑的所有内容，然后提交给后台
+            var title = document.getElementById("title").value;
+            var tags = document.getElementById("tags").value;
+            var short = document.getElementById("short").value;
+            var content = document.getElementById("content").value;
+            var createTime = document.getElementById("createTime").value;
+            var blogId = document.getElementById("blogId").value;//依据这个id可进行一系列操作
+
+            console.log(title + ": " + blogId)
+
+            //创建对象存储一一对应的值
+            var blogObject = {
+                /*
+                踩坑日记：需要传递到后端的对象的属性名称要和后端的结构体字段的json标签一致，还有类型需要一致，
+                不然反序列化的时候会反序列化不到*/
+                "id": Number(blogId),
+                "title": title,
+                "tags": tags,
+                "short": short,
+                "content": content,
+                "create_time_1": createTime
+            }
+            //ajax提交  把对象发送到后端
+            $.ajax({
+                url:"/editBlog",
+                type:"POST",
+                dataType:"json",
+                //将博客对象序列化然后发送到后台
+                data:JSON.stringify(blogObject),
+                contentType:"application/json;charset=utf-8",
+                //回调函数
+                success:function (hint) { //这个blog就是后端c.Data["json"] = XXX,返回的值
+                    /*我们可以从后端判断是否更新成功，如果更新成功，那么就返回true，然后我们根据这个hint来判断是否跳转页面，或者继续操作*/
+                    console.log(hint)
+                    if (hint === "true"){
+                        //如果为true，更新成功，
+                        //跳转页面 windows.location.href="/blog.html"  这个是前端路由重定向
+                        console.log("我在前端使用了路由重定向")
+                        window.alert("编辑成功")
+                        //编辑成功后刷新页面，这样就能显示回原来的样子
+                        location.reload();
+                    }
+
+                }
+            })
+
+        }
+
+    </script>
+
+</head>
+<!-- 页面加载完毕就执行这个js函数-->
+<body onload="input_disabled()">
+<!--引入页头 -->
+{{template "thead.html"}}
+<!--利用后端或者前端get到标签名字，然后显示在博客详情分页显示的页面上 -->
+
+<div class="box2">
+    <form action="/editBlog" method="post">
+        {{range .BlogInfo}}
+        <div class="blog" onkeydown="Words1()">
+            标题 <br>
+            <input type="text" class="title" id="title" name="title" value="{{.Title}}">
+            标签 <br>
+            <input type="text" id="tags" name="tags" value="{{.Tags}}">
+            简介 <br>
+            <textarea name="short" id="short">{{.Short}}</textarea><br>
+            内容 <br>
+            <textarea name="content" id="content">{{.Content}}</textarea><br>
+            更新时间 <br>
+            <input type="text" id="createTime" name="createTime" value="{{.CreateTime1}}">
+            <!-- 后期我们要根据这个id来修改博客内容，和进行操作，这个id对应数据库里的主键id，我们在页面中不给他显示-->
+            <input type="hidden" id="blogId" name="blogId" value="{{.Id}}">
+            <br>
+            {{/*<a href="/editBlog.html?tag={{.Tags}}&title={{.Title}}&author={{.Author}}" class="edit"
+               onclick="edit()" id="edit">编辑</a>*/}}
+            <span id="edit" class="edit">编辑</span>
+
+            <!-- readonly 和 disabled -->
+            <a href="/deleteBlog?tag={{.Tags}}&title={{.Title}}&author={{.Author}}" id="del"
+               onclick="blogOut()" class="del">
+                删除博客
+            </a>
+            <br>
+            {{end}}
+        </div>
+    </form>
+    <div class="end" id="end">
+        共 <span id="words"></span> 个字
+        <a href="#blog" class="top">回到顶部</a>
+        <input type="submit" id="sub" value="发布" onclick="subm()">
+    </div>
+</div>
+
+</body>
+</html>

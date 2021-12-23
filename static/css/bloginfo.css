@@ -1,0 +1,50 @@
+.box2 {
+    margin: 25px 50px;
+    line-height: 29px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.box1 .tagname{
+    font-size: 25px;
+    font-weight: bold;
+}
+.box2 input {
+    width: 74%;
+    height: 27px;
+    display: block;
+    word-break: break-all;
+}
+.box2 a{
+    text-decoration: none;
+}
+.box2 a:hover{
+
+}
+.box2 .del{
+    color: darkgray;
+}
+.box2 .edit{
+    color: darkgray;
+
+}
+.box2 #short{
+    width: 74%;
+    height: 30px;
+}
+.box2 #content{
+    width: 74%;
+    height: 150px;
+}
+
+
+ .sub {
+    width: 80px;
+    height: 35px;
+    background-color: #BCE0D1;
+    display: inline-block;
+    border: 1px solid #d0efdd;
+    border-radius: 10% 10%;
+    margin-left: 550px;
+}
+

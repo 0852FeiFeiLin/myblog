@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tags</title>
+    <link rel="stylesheet" href="/static/css/tags.css">
+</head>
+<body>
+{{/*
+<div class="box1">
+    <div class="as1">
+        <a href="/blog.html">首页</a>
+        <a href="/blog.html">标签</a>
+        <a href="/album.html">相册</a>
+        <a href="/editUser.html">关于我</a>
+    </div>
+    <div class="as2">
+        <a href="/login.html"> 登录</a>
+        <a href="/register.html">注册</a>
+    </div>
+</div>*/}}
+
+<!--代码优化，就是都通过继承thead页面来实现也头部的设计，简化代码 -->
+{{template "thead.html".}}
+
+<div class="box2">
+    <div class="t1">标签</div>
+    <ul class="tags">
+
+        <li>
+            <a href="/blogs?tag=AJAX">AJAX </a>有{{.AJAX}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=DOM">DOM </a> 有{{.DOM}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=JavaScript">JavaScript是Web的编程语言</a> 有{{.JavaScript}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=Java">Java </a> 有{{.Java}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=RPC">RPC</a> 有{{.RPC}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=HTML">HTML </a> 有{{.HTML}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=Css">css </a> 有{{.Css}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=Jsp">jsp</a> 有{{.Jsp}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=Go">go</a> 有{{.Go}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=Golang">golang</a> 有{{.Golang}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=Http"> http</a> 有{{.Http}}篇文章
+        </li>
+
+        </li>
+        <li>
+            <a href="/blogs?tag=JQuery">JQuery</a> 有{{.JQuery}}篇文章
+        </li>
+        <li>
+            <a href="/blogs?tag=MySQL">mysql </a> 有{{.Mysql}}篇文章
+        </li>
+    </ul>
+</div>
+
+
+<div class="box3">
+    <div class="write">
+        <div class="hint">创作</div>
+
+        <div class="create">
+            <p>
+                12345,上山打老虎！
+            </p>
+            <ul>
+                <!-- 结合session，然后判断是否IsLogin，才能跳转到写博客-->
+                <li>
+                    <a href="/writeBlog.html">写博客</a>
+                </li>
+                <li>
+                    <a href="/album.html">上传相册</a>
+                    <!-- 后期我们添加一个板块，就是显示该作者最近添加的文章。最新文章-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="box4">
+    <h2>Blog最新文章:</h2>
+    <li>{{.short0}}</li>
+    <li>{{.short1}}</li>
+    <li>{{.short2}}</li>
+</div>
+
+
+</body>
+</html>

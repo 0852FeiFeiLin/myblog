@@ -1,0 +1,11 @@
+@import "login.css";
+
+.box2 .register{
+    border-radius: 3px;
+    border: 2px solid #BCE0D1;
+    cursor: pointer;
+    background-color: #fff !important;
+    color: #BCE0D1 !important;
+    position: relative;
+    top: 8px;
+}

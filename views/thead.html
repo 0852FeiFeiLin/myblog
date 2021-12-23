@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/thead.css">
+</head>
+<body>
+<div class="box1">
+    <div class="as1">
+        <a href="/blog.html">首页</a>
+        <a href="/blog.html">标签</a>
+        <a href="/album.html">相册</a>
+        <a href="/editUser.html">关于我</a>
+    </div>
+    {{if .IsLogin}}
+        登录了
+        <div class="as2">
+            <a href="/exit"> 退出</a>
+        </div>
+    {{else}}
+        <div class="as2">
+            没有登录
+            <a href="/login.html"> 登录</a>
+            <a href="/register.html">注册</a>
+        </div>
+    {{end}}
+</div>
+</body>
+</html>

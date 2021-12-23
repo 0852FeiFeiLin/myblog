@@ -1,0 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url("/static/img/error.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

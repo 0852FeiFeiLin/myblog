@@ -1,0 +1,28 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body .blogs{
+    color: #151C1B;
+
+}
+.blogs li{
+    list-style: none;
+    border: 1px solid #8BBAB4;
+    line-height: 22px;
+    margin-top: 14px;
+
+}
+body .blogs  a{
+    text-decoration: none;
+    color: #151C1B;
+    font-weight: bold;
+
+}
+body .blogs a:hover{
+    color: #BCE0D1;
+
+}
+.blogs {
+    margin-left: 25px;
+}
