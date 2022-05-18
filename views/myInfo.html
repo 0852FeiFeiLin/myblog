@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <style>
+        table {
+            width: 70%;
+            border: 1px solid #000;
+            /* 指定边框之间的距离,但是边框会重叠 */
+            /* border-spacing: 0px; */
+            border-collapse: collapse;
+        }
+
+        td, th {
+            height: 30px;
+            border: 1px solid #000;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="showTime({{.Users.CreateTime}})">
+<!--表单发起请求获取个人信息 -->
+<div style="display:none">
+    <form id="myForm" action="/myInfo" method="post"></form>
+</div>
+
+<h1>个人信息</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>加入博客时间</th>
+        <th>用户状态</th>
+    </tr>
+    <tr>
+        <td>{{.Users.Id}}</td>
+        <td>{{.Users.Username}}</td>
+        <td id="time" >
+
+
+        </td>
+        {{if eq .Users.Status 0 }}
+            <td>正常用户</td>
+        {{else}}
+            <td>非正常</td>
+        {{end}}
+    </tr>
+
+    </thead>
+</table>
+
+</body>
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script>
+    function subToHX() {
+        document.getElementById("myForm").submit();
+    }
+    function showTime(time) {
+        var timestamp = timestampToTime(time);
+        var t = document.getElementById("time");
+        t.innerHTML = timestamp;
+        console.log(timestamp)
+    }
+
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        var D = date.getDate() + ' ';
+        var h = date.getHours() + ':';
+        var m = date.getMinutes() + ':';
+        var s = date.getSeconds();
+        return Y + M + D + h + m + s;
+    }
+
+    /* timestampToTime(1403058804);
+     console.log(timestampToTime(1403058804));//2014-06-18 10:33:24　　//注意：如果是Unix时间戳记得乘以1000。比如：PHP函数time()获得的时间戳就要乘以1000。*/
+</script>
+</html>

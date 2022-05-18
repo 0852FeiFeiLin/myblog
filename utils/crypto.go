@@ -15,7 +15,6 @@ import (
 /*
 	该函数用于对密码进行加密
 */
-
 func MD5(str string) string {
 	md5 := fmt.Sprintf("%X",md5.Sum([]byte(str)))
 	fmt.Println(md5)

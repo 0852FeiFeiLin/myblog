@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<button onclick="showImg()">展示相册</button>
+<div>所有的图片资源</div>
+{{range $key,$val := .ImgPath}}
+    {{$val}}
+{{end}}
+<div id="imgs"></div>
+</body>
+<!-- 请求方式2:ajax提交   -->
+<script>
+    function showImg() {
+        console.log("我在异步请求照片！")
+        //ajax提交  把对象发送到后端
+        $.ajax({
+            url: "/albumTest",
+            async: true,//true = 异步、false = 同步
+            type: "POST",
+            dataType: "text",
+            //将博客对象序列化然后发送到后台
+            //data: JSON.stringify(0),
+            data: null,
+            contentType: "application/json;charset=utf-8",
+            //回调函数
+            success: function (hint) {
+                var imgs = document.getElementById("imgs");
+                ims.innerHTML = hint
+
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                alert(XMLHttpRequest.readyState +" "+ XMLHttpRequest.status + XMLHttpRequest.responseText);
+            }
+        })
+
+    }
+</script>
+
+</html>

@@ -63,6 +63,7 @@ func (r *RegisterController) Register() {
 	//3、调用modules的查询方法，查看用户是佛已经存在
 	isExist := models.QueryByUserName(user)
 	if isExist == true  { //存在
+		r.Redirect("/register.html",302)
 		r.Data["errInfo"] = "该用户名已经存在，请重新输入"
 		return
 	}

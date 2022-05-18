@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<!--
+<input type="button" onclick="showImg()" value="展示相册" > -->
+<!--请求方式1:表单提交-->
+<form action="/albumTest" method="post">
+    <input type="submit" value="显示相册">
+</form>
+
+<div>所有的图片资源</div>
+
+{{range .Album}}
+    {{.Id}}
+    {{.FilePath}}
+    {{.FileName}}
+    {{.Status}}
+    {{.CreateTime}}
+    <br>
+{{end}}
+
+
+<ul>
+    {{range $key,$val := .ImgPath}}
+        <li>
+            <img src="{{$val}}" alt="" width="200px">
+        </li>
+        <br>
+    {{end}}
+</ul>
+
+<div id="imgs"></div>
+</body>
+<!-- 请求方式2:ajax提交   -->
+<script>
+    function showImg() {
+
+        console.log("我在异步请求照片！")
+        //ajax提交  把对象发送到后端
+        $.ajax({
+            url: "/albumTest",
+            async: true,//true = 异步、false = 同步
+            type: "POST",
+            //将博客对象序列化然后发送到后台
+            //data: JSON.stringify(0),
+            data: null,
+            contentType: "application/json;charset=utf-8",
+            //回调函数
+            success: function (hint) { //这个就是那些页面数据
+                console.log("", hint)
+
+                var imgs = document.getElementById("imgs");
+                imgs.innerHTML = hint
+
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+
+                alert(XMLHttpRequest.readyState +" "+ XMLHttpRequest.status + XMLHttpRequest.responseText);
+
+            }
+        })
+
+    }
+
+</script>
+
+</html>

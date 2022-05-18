@@ -70,6 +70,7 @@ func (e *EditBlogController) EditBlog() {
 	fmt.Println("受影响的id：",id," ","受影响的行数",count)
 	//如果编辑成功，那么返回true给前端
 	e.Data["json"] = "true"
+	e.Data["IsLogin"] = e.IsLogin
 	e.ServeJSON()//发送数据给前端，发送的是一个json数据
 
 }

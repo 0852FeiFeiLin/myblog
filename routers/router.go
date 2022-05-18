@@ -19,13 +19,9 @@ func init() {
 
 	//标签
 	beego.Router("/tags.html", &controllers.TagsController{}, "get:ToTags")
-	//问题：a标签每次提交，跳转是get请求，怎么让他变为post请求
 	//beego.Router("/tags",&controllers.TagsController{},"get:ToTags")
 	beego.Router("/blogs.html", &controllers.BlogsController{}, "get:ToBlogs")
 	beego.Router("/blogs", &controllers.BlogsController{}, "post:Blogs")
-	//个人相册
-	beego.Router("/album.html", &controllers.AlbumController{}, "get:ToAlbum")
-	//beego.Router("/album",&controllers.AlbumController{},"post:Album")
 
 	//关于我
 	beego.Router("/editUser.html", &controllers.EditUserController{}, "get:ToEditUser")
@@ -46,5 +42,19 @@ func init() {
 	beego.Router("/editBlog", &controllers.EditBlogController{}, "post:EditBlog")
 	//删除博客
 	beego.Router("/deleteBlog", &controllers.BlogInfoController{}, "get:DeleteBlog")
+	//个人相册
+	beego.Router("/album.html", &controllers.AlbumController{}, "get:ToAlbum")
+
+	//上传相册文件
+	beego.Router("/uploadAlbum",&controllers.AlbumController{},"post:UploadAlbum")
+	beego.Router("/showAllAlbum",&controllers.AlbumController{},"post:ShowAllAlbum")
+
+	//个人相册测试
+	beego.Router("/albumTest.html",&controllers.AlbumTestController{},"get:ToAlbumTest")
+	beego.Router("/albumTest",&controllers.AlbumTestController{},"post:AlbumTest")
+
+	//个人信息
+	beego.Router("/myInfo.html",&controllers.MyInfoController{},"get:ToMyInfo")
+	beego.Router("/myInfo",&controllers.MyInfoController{},"get:MyInfo")
 
 }

@@ -39,10 +39,12 @@ func (b *BlogController)ToBlog(){
 		//前端: b.Data["AJAX"] = groMap["Ajax"]
 	}
 	b.Data["tags"] = groMap
+	b.Data["IsLogin"]= b.IsLogin
 	/*b.Data["json"] = groMap*/
 
 	//调用显示最新文章功能
 	b.bestBlogs()
+
 
 }
 /*

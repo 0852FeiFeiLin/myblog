@@ -14,13 +14,13 @@
         <a href="/editUser.html">关于我</a>
     </div>
     {{if .IsLogin}}
-        登录了
+      {{/*  登录了*/}}
         <div class="as2">
             <a href="/exit"> 退出</a>
         </div>
     {{else}}
         <div class="as2">
-            没有登录
+           {{/*没有登录*/}}
             <a href="/login.html"> 登录</a>
             <a href="/register.html">注册</a>
         </div>

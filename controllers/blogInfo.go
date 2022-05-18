@@ -24,7 +24,7 @@ type BlogInfoController struct {
 */
 func (b *BlogInfoController) BlogInfo() {
 	b.TplName = "bloginfo.html"
-	//通过该方法找到url?后面的值
+	//通过该方法找到url?前面的值
 	value := b.Ctx.Request.Referer()
 	fmt.Println(value)
 	//方式1
@@ -67,9 +67,11 @@ func (b *BlogInfoController) DeleteBlog() {
 		return
 	}
 	if count == 0 {
+
 		fmt.Println("删除失败，您没有权限")
 		return
 	}
+	b.Redirect("blog.html",302)
 	fmt.Println("删除成功")
 
 }

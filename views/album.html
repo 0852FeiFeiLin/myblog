@@ -3,10 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Album</title>
-
+    <script src="/static/js/jquery-1.8.3.js"></script>
 </head>
+<!--页面一加载就执行显示图片事件 -->
 <body>
+
 {{template "thead.html".}}
-这个是个人相册
+<div style="margin-top: 5px">
+    <h1> 上传图片</h1>
+    <br>
+    <div>
+        <form action="/uploadAlbum" enctype="multipart/form-data" method="post">
+            <input type="file" name="file" value="选择文件" placeholder="请选择文件">
+            &nbsp;&nbsp;
+            <input type="submit" value="立即上传">
+        </form>
+    </div>
+
+    <!-- <img src="static\upload\images\2022\4\24\1650797364.jpg" alt="">-->
+    <!--<img src="static\upload\images\2022\4\24\1650797364.jpg" alt="">-->
+</div>
+
+<div style="height: 50px"></div>
+
+<div>所有的图片资源</div>
+<!-- 请求方式1:表单提交   -->
+<form action="/showAllAlbum" method="post">
+    <input type="submit" value="显示相册">
+</form>
+{{range $key,$val := .ImgPath}}
+    {{$val}}
+    <br>
+    <img src="{{$val}}" alt="个人相册资源" width="200px">
+    <br>
+{{end}}
+<!--分页展示，按时间显示 -->
+{{/*
+{{template "albumTest.html".}}
+*/}}
 </body>
+{{/*
+
+<script>
+    function showImg() {
+        console.log("我在异步请求照片！")
+        //ajax提交  把对象发送到后端
+        $.ajax({
+            url: "/showAllAlbum",
+            type: "POST",
+            dataType: "json",
+            //将博客对象序列化然后发送到后台
+            //data: JSON.stringify(0),
+            data: null,
+            contentType: "application/json;charset=utf-8",
+            //回调函数
+            success: function (hint) {
+                // console.log("", hint)
+
+            }
+        })
+    }
+</script>
+*/}}
+
 </html>

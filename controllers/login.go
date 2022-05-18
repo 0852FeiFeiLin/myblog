@@ -51,9 +51,9 @@ func(i *IndexController) Index(){
 	fmt.Println("登录成功！")
 	i.SetSession("userName",user.Username)
 	fmt.Println("Session:",i.GetSession("userName"))
-	//登录成功跳转到tags页面
-	i.TplName = "tags.html"
-
+	//登录成功跳转到tags页面Index页面
+/*	i.TplName = "tags.html"
+*/
 /*	//请求重定向
 	i.Redirect("/tags.html",302)*/
 	i.Redirect("blog.html",302)

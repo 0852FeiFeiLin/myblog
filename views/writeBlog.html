@@ -93,7 +93,7 @@
         }
     </style>
 </head>
-<body>
+<body>{{/*
 <div class="box1">
     <div class="as0">
         <div class="at">写博客</div>
@@ -107,7 +107,9 @@
     <div class="as2">
         <a href="/exit"> 退出</a>
     </div>
-</div>
+</div>*/}}
+{{template "thead.html".}}
+
 {{.info}}
 <div class="box2">
     <form action="/writeBlog" method="post" name="article">

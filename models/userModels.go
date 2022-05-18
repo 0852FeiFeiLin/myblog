@@ -2,8 +2,8 @@ package models
 
 import (
 	"fmt"
-	"myBlog/utils"
 	"myBlog/entity"
+	"myBlog/utils"
 	"time"
 )
 
@@ -96,6 +96,24 @@ func QueryByUserName(user entity.Users) bool {
 	fmt.Println("该用户名已经存在")
 	return isExist
 }
+
 /*
 	展示，
 */
+
+/*
+	根据用户名查询用户
+*/
+func QueryUserInfoByName(name string) (*entity.Users, error) {
+	sql := "select * from users where username = ?"
+	row := utils.QueryObject(sql, name)
+	user := entity.Users{}
+	err := row.Scan(&user.Id, &user.Username, &user.Password, &user.Status, &user.CreateTime)
+
+	//err不为空，就说明没有数据行，说明用户不存在
+	if err != nil {
+		return nil, err //不存在false
+	}
+
+	return &user, nil
+}
