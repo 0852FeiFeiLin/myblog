@@ -11,34 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="652db04f-b545-4361-abbe-7c7d2e6d08a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/albumController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/albumTest.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/fileComController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/myInfoController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/upload/images/2022/5/7/1651899523.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/albumTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/myInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/album.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/baseController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/baseController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/blogController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/blogInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogInfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/blogs.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogs.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/editBlog.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/editBlog.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/myInfoController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/myInfoController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/album.go" beforeDir="false" afterPath="$PROJECT_DIR$/entity/album.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/userModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/userModels.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myBlog.exe" beforeDir="false" afterPath="$PROJECT_DIR$/myBlog.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/tags.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/tags.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/crypto.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/crypto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/album.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/album.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tags.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/thead.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/thead.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/writeBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/writeBlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/writeBlog.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/writeBlog.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/blogModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/blogService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/userModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/userService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery-1.8.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-1.8.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/dbUtil.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/dbUtil.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -81,7 +69,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -96,31 +84,31 @@
       <recent name="D:\GoPATH\src\myBlog\controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build myBlog (2)">
+  <component name="RunManager" selected="Go Build.go build myBlog">
     <configuration name="go build myBlog (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="myBlog" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="DIRECTORY" />
-      <filePath value="$PROJECT_DIR$/test.go" />
       <package value="myBlog" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/test.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build myBlog (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="myBlog" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/test.go" />
       <package value="myBlog" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/test.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build myBlog" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="myBlog" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="myBlog" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <list>
@@ -130,8 +118,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build myBlog (2)" />
         <item itemvalue="Go Build.go build myBlog" />
+        <item itemvalue="Go Build.go build myBlog (2)" />
         <item itemvalue="Go Build.go build myBlog (1)" />
       </list>
     </recent_temporary>
@@ -151,43 +139,38 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="340" y="0" key="#go_build_myBlog_(2)" timestamp="1651910810329">
+    <state x="433" y="174" key="#Go_Modules" timestamp="1666626495526">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="340" y="0" key="#go_build_myBlog_(2)/0.0.1280.680@0.0.1280.680" timestamp="1651910810329" />
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1650801717381">
+    <state x="433" y="174" key="#Go_Modules/0.0.1280.680@0.0.1280.680" timestamp="1666626495526" />
+    <state x="602" y="136" key="FileChooserDialogImpl" timestamp="1666760938126">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1650801717381" />
-    <state x="602" y="136" key="FileChooserDialogImpl" timestamp="1651995465264">
+    <state x="602" y="136" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1666760938126" />
+    <state width="1237" height="241" key="GridCell.Tab.0.bottom" timestamp="1666627768464">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="602" y="136" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1651995465264" />
-    <state width="1237" height="256" key="GridCell.Tab.0.bottom" timestamp="1651920657325">
+    <state width="1237" height="241" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
+    <state width="1237" height="241" key="GridCell.Tab.0.center" timestamp="1666627768464">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="256" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1651920657325" />
-    <state width="1237" height="256" key="GridCell.Tab.0.center" timestamp="1651920657325">
+    <state width="1237" height="241" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
+    <state width="1237" height="241" key="GridCell.Tab.0.left" timestamp="1666627768464">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="256" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1651920657325" />
-    <state width="1237" height="256" key="GridCell.Tab.0.left" timestamp="1651920657325">
+    <state width="1237" height="241" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
+    <state width="1237" height="241" key="GridCell.Tab.0.right" timestamp="1666627768464">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="256" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1651920657325" />
-    <state width="1237" height="256" key="GridCell.Tab.0.right" timestamp="1651920657325">
+    <state width="1237" height="241" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1666760939362">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="256" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1651920657325" />
-    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1650801717381">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1650801717381" />
-    <state x="391" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1650781929778">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="391" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1650781929778" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1666760939362" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -203,7 +186,7 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/models/userModels.go</url>
+          <url>file://$PROJECT_DIR$/service/userService.go</url>
           <line>31</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>

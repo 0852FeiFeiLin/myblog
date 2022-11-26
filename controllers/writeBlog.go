@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 	"myBlog/entity"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -53,7 +53,7 @@ func (w *WriteBlogController)WriteBlog(){
 	*/
 	fmt.Println(article)
 	//将结构体数据插入数据库，然后路由重定向到tags页面，并显示添加的内容。
-	_, _, err := models.InsertBlog(article)
+	_, _, err := service.InsertBlog(article)
 	if err != nil {
 		fmt.Println(err.Error())
 		return

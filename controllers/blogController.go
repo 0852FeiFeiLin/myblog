@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"myBlog/entity"
-	"myBlog/models"
+	"myBlog/service"
 	"strconv"
 )
 
@@ -51,7 +51,7 @@ func (b *BlogController)ToBlog(){
 	Blog控制器内部方法，小写权限控制，最新文章
 */
 func (b *BlogController) bestBlogs()  {
-	blogs, err := models.QueryBestNews()
+	blogs, err := service.QueryBestNews()
 	if err != nil {
 		return
 	}

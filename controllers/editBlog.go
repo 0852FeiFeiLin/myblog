@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"myBlog/entity"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -33,7 +33,7 @@ func (e *EditBlogController) ToEditBlog() {
 	content := e.GetString("content")
 	fmt.Println(tag+","+title+",", author+","+short,",",content)
 	art := entity.Article{0,title,author,tag,title,content,time.Now().Unix()}
-	_, count, err := models.UpdateBlog(art)
+	_, count, err := service.UpdateBlog(art)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
@@ -60,7 +60,7 @@ func (e *EditBlogController) EditBlog() {
 	json.Unmarshal(blogs,&art)
 	fmt.Println("成功序列化到结构体中：\n",art)
 	//调用数据库update方法
-	id, count, err := models.UpdateBlog(art)
+	id, count, err := service.UpdateBlog(art)
 	if err != nil {
 		fmt.Println(err.Error())
 		e.Data["json"] = false

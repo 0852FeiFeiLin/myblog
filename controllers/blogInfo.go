@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"myBlog/entity"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -36,7 +36,7 @@ func (b *BlogInfoController) BlogInfo() {
 	var tag2 = b.Input().Get("tag")*/
 
 	//根据tag,title,author去数据库中查找,返回结果集
-	Blogs, err := models.QueryBlog(tag, title, author)
+	Blogs, err := service.QueryBlog(tag, title, author)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
@@ -61,7 +61,7 @@ func (b *BlogInfoController) DeleteBlog() {
 
 	fmt.Println(b.GetSession("userName").(string))
 	//查询数据库，然后删除操作,
-	count, err := models.DeleteBlog(tag, title, b.GetSession("userName").(string))
+	count, err := service.DeleteBlog(tag, title, b.GetSession("userName").(string))
 	if err != nil {
 		fmt.Println(err.Error())
 		return

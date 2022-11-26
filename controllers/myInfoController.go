@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -27,7 +27,7 @@ func (m *MyInfoController) ToMyInfo() {
 //post
 func (m *MyInfoController) MyInfo() { //获取个人信息
 	name := m.GetSession("userName")
-	userInfo, _ := models.QueryUserInfoByName(name.(string))
+	userInfo, _ := service.QueryUserInfoByName(name.(string))
 
 	fmt.Println(userInfo)
 	m.Data["Users"] = userInfo

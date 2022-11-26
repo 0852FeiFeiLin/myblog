@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"myBlog/entity"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -61,7 +61,7 @@ func (r *RegisterController) Register() {
 	*/
 
 	//3、调用modules的查询方法，查看用户是佛已经存在
-	isExist := models.QueryByUserName(user)
+	isExist := service.QueryByUserName(user)
 	if isExist == true  { //存在
 		r.Redirect("/register.html",302)
 		r.Data["errInfo"] = "该用户名已经存在，请重新输入"
@@ -74,7 +74,7 @@ func (r *RegisterController) Register() {
 	}*/
 
 	//插入方法把user插入
-	_, _, err := models.Register(user) //根据具体需要判断是否要id和受影响的行数
+	_, _, err := service.Register(user) //根据具体需要判断是否要id和受影响的行数
 	if err != nil {
 		fmt.Println(err.Error())
 		r.Data["errInfo"] = "注册发生错误，请重新注册"

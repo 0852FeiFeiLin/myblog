@@ -566,7 +566,7 @@ jQuery.extend({
 		}
 	},
 
-	// Convert dashed to camelCase; used by the css and data models
+	// Convert dashed to camelCase; used by the css and data service
 	// Microsoft forgot to hump their vendor prefix (#9572)
 	camelCase: function( string ) {
 		return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
@@ -6914,7 +6914,7 @@ function augmentWidthOrHeight( elem, name, extra, isBorderBox ) {
 		val = 0;
 
 	for ( ; i < 4; i += 2 ) {
-		// both box models exclude margin, so add it if we want it
+		// both box service exclude margin, so add it if we want it
 		if ( extra === "margin" ) {
 			// we use jQuery.css instead of curCSS here
 			// because of the reliableMarginRight CSS hook!
@@ -9460,7 +9460,7 @@ window.jQuery = window.$ = jQuery;
 // specifying define.amd.jQuery = true. Register as a named module,
 // since jQuery can be concatenated with other files that may use define,
 // but not use a proper concatenation script that understands anonymous
-// AMD models. A named AMD is safest and most robust way to register.
+// AMD service. A named AMD is safest and most robust way to register.
 // Lowercase jquery is used because AMD module names are derived from
 // file names, and jQuery is normally delivered in a lowercase file name.
 // Do this after creating the global so that if an AMD module wants to call

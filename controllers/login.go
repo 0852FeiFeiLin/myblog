@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"myBlog/entity"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -39,7 +39,7 @@ func(i *IndexController) Index(){
 	fmt.Println("前端password:",user.Password)
 	fmt.Println("传递：",user)
 	//传入数据库查询方法验证
-	users := models.Login(user)
+	users := service.Login(user)
 	fmt.Println("数据库查询到的数据：",users)
 
 	//通过判断id值来判断数据库是否查询到值

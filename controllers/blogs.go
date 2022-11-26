@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	"myBlog/models"
+	"myBlog/service"
 )
 
 /**
@@ -40,7 +40,7 @@ func (b *BlogsController) Blogs() {
 	var tag2 = b.Input().Get("tag")*/
 	fmt.Println(tag)
 	//利用tag去数据库中group查找,返回结果集
-	Blogs, err := models.QueryBlogsByTags(tag)
+	Blogs, err := service.QueryBlogsByTags(tag)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
