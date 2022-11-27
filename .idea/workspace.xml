@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,21 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="652db04f-b545-4361-abbe-7c7d2e6d08a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/myBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myBlog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/baseController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/baseController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/blogController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/blogInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogInfo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/blogs.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/editBlog.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/editBlog.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/myInfoController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/myInfoController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/writeBlog.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/writeBlog.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/blogModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/blogService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/userModels.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/userService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery-1.8.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-1.8.3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/dbUtil.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/dbUtil.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +33,15 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="D:\Go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../GoROOT" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21TmWO0aYgoljySnwWOE9UlShei" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -52,25 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/GoPATH/src/publicChain",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GoPATH\src\myBlog\tests" />
@@ -124,8 +122,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -137,40 +136,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="433" y="174" key="#Go_Modules" timestamp="1666626495526">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="433" y="174" key="#Go_Modules/0.0.1280.680@0.0.1280.680" timestamp="1666626495526" />
-    <state x="602" y="136" key="FileChooserDialogImpl" timestamp="1666760938126">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="602" y="136" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1666760938126" />
-    <state width="1237" height="241" key="GridCell.Tab.0.bottom" timestamp="1666627768464">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="241" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
-    <state width="1237" height="241" key="GridCell.Tab.0.center" timestamp="1666627768464">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="241" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
-    <state width="1237" height="241" key="GridCell.Tab.0.left" timestamp="1666627768464">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="241" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
-    <state width="1237" height="241" key="GridCell.Tab.0.right" timestamp="1666627768464">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="241" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1666627768464" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1666760939362">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1666760939362" />
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
